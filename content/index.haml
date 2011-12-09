@@ -1,11 +1,30 @@
 #map
 #content
   .inner
-    %header
-      %h1 Blake Simpson
-    
-    %article.body  
-      %aside.profile
-        %img{:src => '#', :alt => 'Twitter profile image'}
+    %article.body
+      %header
+        %h1 Blake Simpson
+        
+      %section.description
+        %p 
+          I am a Web Developer who enjoys creating websites and application using technologies such as 
+          %span Ruby on Rails, 
+          %span JavaScript
+          and 
+          %span CSS
+          
+        %p
+          I have moved from 
+          %a.dundee{:href => '#'} Dundee
+          to
+          %a.hamburg{:href => '#'} Hamburg
+          and I now work for 
+          %a{:href => 'http://ubilabs.net/', :rel => 'blank'} Ubilabs,
+          building Location Based Media applications.
+        
+           
+    %aside.profile
+      .loading
+      %img{:src => '#', :alt => 'Twitter profile image'}
       
     %footer.links
