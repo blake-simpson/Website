@@ -13,3 +13,4 @@ gem 'compass_twitter_bootstrap'
 # Development rack server
 gem 'rack'
 gem 'rack-rewrite', :require => 'rack/rewrite'
+gem 'mime-types'

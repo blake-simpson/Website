@@ -4,6 +4,7 @@ $(function() {
       tweets = [],
       location,
       bounds,
+      profile_photo,
       map;
       
   function init() {    
@@ -23,14 +24,7 @@ $(function() {
     map = new google.maps.Map($canvas.get(0), mapOpts); 
     bounds = new google.maps.LatLngBounds();
     load_tweets();
-    load_page();
-  };   
-  
-  function load_page() {
-    $.getJSON('http://campl.us/user/brsim', function(data) {
-      console.log(data)
-    });
-  }
+  };
   
   function load_tweets() {
     $.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name=brsim&count=15&callback=?', function(data) {
@@ -38,6 +32,7 @@ $(function() {
         if(val.geo) {
           tweets.push(val);
         }
+        assign_profile_photo(val);
       });
       show_tweets();
     });
@@ -55,6 +50,13 @@ $(function() {
       });
       bounds.extend(point);
     });
+  }
+  
+  function assign_profile_photo(tweet) {
+    if(!profile_photo && tweet.user) {
+      profile_photo = tweet.user.profile_image_url.replace("_normal", "");
+      $("aside.profile img").attr('src', profile_photo);
+    }
   }
   
   init();
