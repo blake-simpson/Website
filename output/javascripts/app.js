@@ -59,6 +59,7 @@ $(function() {
       click_listener(marker);
       bounds.extend(point);
     });
+    update_popups();
   }
   
   function update_popups() {
@@ -96,11 +97,17 @@ $(function() {
     return {x: new_x, y: new_y}
   }
   
+  function replace_urls_with_links(text) {
+    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(exp,"<a href=\"$1\">$1</a>"); 
+  }
+  
   function create_popup(tweet, marker) {
-    var popup = $("<div></div>").appendTo("body");
+    var popup = $("<div></div>").appendTo("body"),
+        text = replace_urls_with_links(tweet.text);
     popup.attr('data-id', tweet.id);
     popup.addClass('popup');
-    popup.text(tweet.text);
+    popup.html(text);
   }
   
   function click_listener(marker) {
