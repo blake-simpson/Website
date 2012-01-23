@@ -1,4 +1,5 @@
-{:	data{I"/:ET{:default{	:	lastI"Ð<!DOCTYPE html>
+{:	data{I"/:ET{:default{	:	lastI"E
+<!DOCTYPE html>
 <html>
   <head>
     <title>Blake Simpson &sect; Web Developer</title>
@@ -16,7 +17,7 @@
               </header>
               <section class='description'>
                 <p>
-                  I am a Web Developer who enjoys creating websites and application using technologies such as
+                  I am a Web Developer who enjoys creating websites and applications using technologies such as
                   <span>Ruby on Rails,</span>
                   <span>JavaScript</span>
                   and
@@ -37,7 +38,30 @@
               <div class='loading'></div>
               <img alt='Twitter profile image' src='#' />
             </aside>
-            <footer class='links'></footer>
+            <footer class='links'>
+              <div class='sites'>
+                <nav>
+                  <ul>
+                    <li>
+                      <a class='twitter' href='http://twitter.com/brsim'>Twitter</a>
+                    </li>
+                    <li>
+                      <a class='facebook' href='http://facebook.com/Blake121'>Facebook</a>
+                    </li>
+                    <li>
+                      <a class='github' href='http://github.com/BlakeSimpson'>Github</a>
+                    </li>
+                    <li>
+                      <a class='lastfm' href='http://last.fm/user/blake121'>Last.fm</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class='blog'>
+                <a href='http://blog.blakesimpson.co.uk/'>Visit Blog</a>
+              </div>
+              <div class='clear'></div>
+            </footer>
           </div>
         </div>
     </div>
@@ -46,7 +70,7 @@
   <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
   <script src='javascripts/app.js'></script>
 </html>
-;T:rawI"þ#map
+;T:rawI"-#map
 #content
   .inner
     %article.body
@@ -55,7 +79,7 @@
         
       %section.description
         %p 
-          I am a Web Developer who enjoys creating websites and application using technologies such as 
+          I am a Web Developer who enjoys creating websites and applications using technologies such as 
           %span Ruby on Rails, 
           %span JavaScript
           and 
@@ -75,7 +99,23 @@
       .loading
       %img{:src => '#', :alt => 'Twitter profile image'}
       
-    %footer.links;T:preI"µ<div id='map'></div>
+    %footer.links
+      .sites
+        %nav
+          %ul
+            %li
+              %a{:href => 'http://twitter.com/brsim', :class => 'twitter'} Twitter
+            %li
+              %a{:href => 'http://facebook.com/Blake121', :class => 'facebook'} Facebook
+            %li
+              %a{:href => 'http://github.com/BlakeSimpson', :class => 'github'} Github
+            %li
+              %a{:href => 'http://last.fm/user/blake121', :class => 'lastfm'} Last.fm
+        
+      .blog
+        %a{:href => 'http://blog.blakesimpson.co.uk/'} Visit Blog
+        
+      .clear;T:preI"r<div id='map'></div>
 <div id='content'>
   <div class='inner'>
     <article class='body'>
@@ -84,7 +124,7 @@
       </header>
       <section class='description'>
         <p>
-          I am a Web Developer who enjoys creating websites and application using technologies such as
+          I am a Web Developer who enjoys creating websites and applications using technologies such as
           <span>Ruby on Rails,</span>
           <span>JavaScript</span>
           and
@@ -105,12 +145,36 @@
       <div class='loading'></div>
       <img alt='Twitter profile image' src='#' />
     </aside>
-    <footer class='links'></footer>
+    <footer class='links'>
+      <div class='sites'>
+        <nav>
+          <ul>
+            <li>
+              <a class='twitter' href='http://twitter.com/brsim'>Twitter</a>
+            </li>
+            <li>
+              <a class='facebook' href='http://facebook.com/Blake121'>Facebook</a>
+            </li>
+            <li>
+              <a class='github' href='http://github.com/BlakeSimpson'>Github</a>
+            </li>
+            <li>
+              <a class='lastfm' href='http://last.fm/user/blake121'>Last.fm</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class='blog'>
+        <a href='http://blog.blakesimpson.co.uk/'>Visit Blog</a>
+      </div>
+      <div class='clear'></div>
+    </footer>
   </div>
 </div>
 ;T:	post@
-I"/stylesheets/styles/;T{;{;I"#html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}body{color:#333;font-size:14px;font-family:Signika,"Trebuchet MS",Verdana,sans-serif}.popup{background:#fff;padding:10px;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 8px #444;-webkit-box-shadow:0px 0px 8px #444;-o-box-shadow:0px 0px 8px #444;box-shadow:0px 0px 8px #444;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);opacity:0.9;position:absolute;width:180px;display:none}#map{position:absolute;top:0;left:0;right:0;bottom:0}#content{position:absolute;top:50%;left:50%;height:250px;width:600px;margin:-125px 0 0 -300px;background:url("../images/background.png");padding:20px;border:2px solid #c2c2c2;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 8px #444;-webkit-box-shadow:0px 0px 8px #444;-o-box-shadow:0px 0px 8px #444;box-shadow:0px 0px 8px #444}#content .inner article.body{float:left}#content .inner article.body header h1{font-size:44px}#content .inner article.body .description{margin:20px 0 0 0;float:left;width:390px;line-height:21px}#content .inner article.body .description a{color:#0054a6}#content .inner article.body .description a:visited{color:#036}#content .inner article.body .description a:hover{text-decoration:underline}#content .inner article.body .description p{margin:0 0 10px 0}#content .inner aside.profile{float:right}#content .inner aside.profile .loading{width:190px;height:190px;background:#fff url("../images/loading.gif") center center no-repeat;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 5px #777;-webkit-box-shadow:0px 0px 5px #777;-o-box-shadow:0px 0px 5px #777;box-shadow:0px 0px 5px #777}#content .inner aside.profile img{display:none;width:190px;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 5px #777;-webkit-box-shadow:0px 0px 5px #777;-o-box-shadow:0px 0px 5px #777;box-shadow:0px 0px 5px #777}#content .inner .links{clear:both}
-;T;	I"Ë@import compass/reset
+I"/stylesheets/styles/;T{;{;I"Hhtml,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}body{color:#333;font-size:14px;font-family:Signika,"Trebuchet MS",Verdana,sans-serif}.popup{background:#fff;padding:10px;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 8px #444;-webkit-box-shadow:0px 0px 8px #444;-o-box-shadow:0px 0px 8px #444;box-shadow:0px 0px 8px #444;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);opacity:0.9;position:absolute;z-index:10;width:180px;display:none}#map{position:absolute;top:0;left:0;right:0;bottom:0}#content{position:absolute;z-index:99;top:50%;left:50%;height:220px;width:600px;margin:-125px 0 0 -300px;background:url("../images/background.png");padding:20px;border:2px solid #c2c2c2;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 8px #444;-webkit-box-shadow:0px 0px 8px #444;-o-box-shadow:0px 0px 8px #444;box-shadow:0px 0px 8px #444}#content .inner article.body{float:left}#content .inner article.body header h1{font-size:44px}#content .inner article.body .description{margin:20px 0 0 0;float:left;width:400px;line-height:21px}#content .inner article.body .description a{color:#0054a6}#content .inner article.body .description a:visited{color:#036}#content .inner article.body .description a:hover{text-decoration:underline}#content .inner article.body .description p{margin:0 0 10px 0}#content .inner aside.profile{float:right}#content .inner aside.profile .loading{width:160px;height:160px;background:#fff url("../images/loading.gif") center center no-repeat;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 5px #777;-webkit-box-shadow:0px 0px 5px #777;-o-box-shadow:0px 0px 5px #777;box-shadow:0px 0px 5px #777}#content .inner aside.profile img{display:none;width:160px;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-box-shadow:0px 0px 5px #777;-webkit-box-shadow:0px 0px 5px #777;-o-box-shadow:0px 0px 5px #777;box-shadow:0px 0px 5px #777}#content .inner footer.links{clear:both}#content .inner footer.links .sites{padding:10px 0;float:left;width:70%}#content .inner footer.links .sites ul li{float:left;display:inline-block}#content .inner footer.links .sites ul li a{text-align:center;color:#0054a6;display:block;padding:5px;margin-right:10px;text-decoration:none;-moz-box-shadow:0 0 5px #777;-webkit-box-shadow:0 0 5px #777;-o-box-shadow:0 0 5px #777;box-shadow:0 0 5px #777;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-transition-property:all;-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-moz-transition-duration:0.5s;-webkit-transition-duration:0.5s;-o-transition-duration:0.5s;transition-duration:0.5s}#content .inner footer.links .sites ul li a:hover{-moz-box-shadow:0 0 5px #036;-webkit-box-shadow:0 0 5px #036;-o-box-shadow:0 0 5px #036;box-shadow:0 0 5px #036}#content .inner footer.links .blog{padding:10px 0;float:right;width:29%}#content .inner footer.links .blog a{text-align:center;color:#0054a6;display:block;width:150px;padding:5px;margin-left:14px;text-decoration:none;-moz-box-shadow:0 0 5px #777;-webkit-box-shadow:0 0 5px #777;-o-box-shadow:0 0 5px #777;box-shadow:0 0 5px #777;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;-moz-transition-property:all;-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-moz-transition-duration:0.5s;-webkit-transition-duration:0.5s;-o-transition-duration:0.5s;transition-duration:0.5s}#content .inner footer.links .blog a:hover{-moz-box-shadow:0 0 5px #0054a6;-webkit-box-shadow:0 0 5px #0054a6;-o-box-shadow:0 0 5px #0054a6;box-shadow:0 0 5px #0054a6}.clear{clear:both}
+;T;	I"
+@import compass/reset
 @import compass/css3
 @import settings
 
@@ -127,6 +191,7 @@ body
   +box-shadow(0px 0px 8px #444)
   +opacity(0.9)
   position: absolute
+  z-index: 10
   width: 180px
   display: none
   
@@ -140,9 +205,10 @@ body
   
 #content
   position: absolute
+  z-index: 99
   top: 50%
   left: 50%
-  height: 250px
+  height: 220px
   width: 600px
   margin: -125px 0 0 -300px
   background: url('../images/background.png')
@@ -161,7 +227,7 @@ body
       .description
         margin: 20px 0 0 0
         float: left
-        width: 390px
+        width: 400px
         line-height: 21px
         a
           color: $col_blue
@@ -171,31 +237,75 @@ body
             text-decoration: underline
         p
           margin: 0 0 10px 0
-        
+    
+    $_img_size: 160px
     aside.profile
       float: right
       .loading
-        width: 190px
-        height: 190px
+        width: $_img_size
+        height: $_img_size
         background: #fff url('../images/loading.gif') center center no-repeat
         +border-radius(3px)
         +box-shadow(0px 0px 5px #777)
         
       img
         display: none //Loaded with javascript
-        width: 190px
+        width: $_img_size
         +border-radius(3px)
         +box-shadow(0px 0px 5px #777)
       
-    .links
-      clear: both;T;
-@I"/javascripts/app/;T{;{;I"¹$(function() {
+    footer.links
+      clear: both
+      .sites
+        padding: 10px 0
+        float: left
+        width: 70%
+        ul
+          li
+            float: left
+            display: inline-block
+            a
+              text-align: center
+              color: $col_blue
+              display: block
+              padding: 5px
+              margin-right: 10px
+              text-decoration: none
+              +box-shadow(0 0 5px #777)
+              +border-radius(3px)
+              +single-transition(all, 0.5s)
+              &:hover
+                +box-shadow(0 0 5px $col_dark_blue)
+        
+      .blog
+        padding: 10px 0
+        float: right
+        width: 29%
+        a
+          text-align: center
+          color: $col_blue
+          display: block
+          width: 150px
+          padding: 5px
+          margin-left: 14px
+          text-decoration: none
+          +box-shadow(0 0 5px #777)
+          +border-radius(3px)
+          +single-transition(all, 0.5s)
+          &:hover
+            +box-shadow(0 0 5px $col_blue)
+            
+
+.clear
+  clear: both;T;
+@I"/javascripts/app/;T{;{;I"W$(function() {
   
   var $canvas = $("#map"),
       tweets = [],
       center_dundee = [56.462018,-2.970721],
       center_hamburg = [53.5569,9.9946],
       default_zoom = 14,
+      markers = [],
       location,
       bounds,
       profile_photo,
@@ -217,6 +327,7 @@ body
     
     map = new google.maps.Map($canvas.get(0), mapOpts); 
     bounds = new google.maps.LatLngBounds();
+    google.maps.event.addListener(map, 'bounds_changed', function() { update_popups(); });
     load_tweets();
   };
   
@@ -237,23 +348,66 @@ body
       var lat = tweet.geo.coordinates[0],
           lng = tweet.geo.coordinates[1],
           point = new google.maps.LatLng(lat,lng);
-      
-      create_popup(tweet);    
+          
       marker = new google.maps.Marker({
         map: map,
         position: point,
         tweet_id: tweet.id
       });
+      markers.push(marker);
+      create_popup(tweet, marker);
       click_listener(marker);
       bounds.extend(point);
     });
+    update_popups();
   }
   
-  function create_popup(tweet) {
-    var popup = $("<div></div>").appendTo("body");
-    popup.data('id', tweet.id);
+  function update_popups() {
+    $('.popup').each(function() {
+      var $self = $(this);
+      update_popup_position($self.data('id'));
+    });
+  }
+  
+  function update_popup_position(popup_id) { 
+    var $popup = $('.popup[data-id="'+popup_id+'"]');
+    $.each(markers, function(key, marker) {
+      if(marker.tweet_id == popup_id) {
+        var marker_offset = get_marker_offset(marker),
+            offset = popup_position($popup, marker_offset);
+        $popup.css('left', offset.x+'px');
+        $popup.css('top', offset.y+'px');
+      }
+    });
+  }
+  
+  function popup_position(popup, offset) {
+    var x = offset.x,
+        y = offset.y,
+        width = popup.outerWidth(),
+        height = popup.outerHeight();
+    var new_x = x-(width/2);
+    if(height == 62) {
+      var new_y = y-(height*1.6);
+    } else if(height == 48) {
+      var new_y = y-(height*1.8);
+    } else {
+      var new_y = y-(height*1.5);
+    }
+    return {x: new_x, y: new_y}
+  }
+  
+  function replace_urls_with_links(text) {
+    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(exp,"<a href=\"$1\">$1</a>"); 
+  }
+  
+  function create_popup(tweet, marker) {
+    var popup = $("<div></div>").appendTo("body"),
+        text = replace_urls_with_links(tweet.text);
+    popup.attr('data-id', tweet.id);
     popup.addClass('popup');
-    popup.text(tweet.text);
+    popup.html(text);
   }
   
   function click_listener(marker) {
@@ -282,6 +436,20 @@ body
     }
   }
   
+  function get_marker_offset(marker) {
+    var scale = Math.pow(2, map.getZoom());
+    var nw = new google.maps.LatLng(
+        map.getBounds().getNorthEast().lat(),
+        map.getBounds().getSouthWest().lng()
+    );
+    var worldCoordinateNW = map.getProjection().fromLatLngToPoint(nw);
+    var worldCoordinate = map.getProjection().fromLatLngToPoint(marker.getPosition());
+    return new google.maps.Point(
+        Math.floor((worldCoordinate.x - worldCoordinateNW.x) * scale),
+        Math.floor((worldCoordinate.y - worldCoordinateNW.y) * scale)
+    );
+  }
+  
   function add_events() {
     var $description = $("section.description"),
         $dundee = $description.find('.dundee'),
@@ -297,15 +465,16 @@ body
       map.setZoom(default_zoom);
       return false;
     });
+
     $('a[rel="blank"]').each(function() {
       $(this).attr('target', '_blank');
-    })
-    
+    });
   }
   
   init();
   add_events();
-});;T;	@;
+});
+;T;	@;
 @I"/images/background/;T{;{ I"/stylesheets/_settings/;T{;{;I" ;T;	I"}$col_blue: #0054a6
 $col_dark_blue: #003366
 $col_gray: #c2c2c2
