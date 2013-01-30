@@ -1,2 +1,1 @@
-rvm use 1.9.2
-rvm gemset use personalsite
+rvm use 1.9.3@personalsite --create

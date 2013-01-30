@@ -1,5 +1,5 @@
 $(function() {
-  
+
   var $canvas = $("#map"),
       tweets = [],
       center_dundee = [56.462018,-2.970721],
@@ -10,10 +10,10 @@ $(function() {
       bounds,
       profile_photo,
       map;
-      
-  function init() {    
-    location = new google.maps.LatLng(center_hamburg[0],center_hamburg[1]);
-    
+
+  function init() {
+    location = new google.maps.LatLng(center_hamburg[0], center_hamburg[1]);
+
     var mapOpts = {
       minZoom: 4,
       zoom: default_zoom,
@@ -24,36 +24,40 @@ $(function() {
       streetViewControl: false,
       mapTypeControl: false
     };
-    
-    map = new google.maps.Map($canvas.get(0), mapOpts); 
+
+    map = new google.maps.Map($canvas.get(0), mapOpts);
     bounds = new google.maps.LatLngBounds();
     google.maps.event.addListener(map, 'bounds_changed', function() { update_popups(); });
     load_tweets();
   };
-  
+
   function load_tweets() {
-    $.getJSON('https://twitter.com/statuses/user_timeline/44665823.json?callback=?', function(data) {
+    $.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?user_id=44665823&callback=?', function(data) {
       $.each(data, function(key, val) {
         if(val.geo) {
           tweets.push(val);
         }
         assign_profile_photo(val);
       });
+
       show_tweets();
     });
   }
-  
+
   function show_tweets() {
     $.each(tweets, function(key, tweet) {
+      if (!tweet || !tweet.geo) { return;}
+
       var lat = tweet.geo.coordinates[0],
           lng = tweet.geo.coordinates[1],
           point = new google.maps.LatLng(lat,lng);
-          
+
       marker = new google.maps.Marker({
         map: map,
         position: point,
         tweet_id: tweet.id
       });
+
       markers.push(marker);
       create_popup(tweet, marker);
       click_listener(marker);
@@ -61,15 +65,15 @@ $(function() {
     });
     update_popups();
   }
-  
+
   function update_popups() {
     $('.popup').each(function() {
       var $self = $(this);
       update_popup_position($self.data('id'));
     });
   }
-  
-  function update_popup_position(popup_id) { 
+
+  function update_popup_position(popup_id) {
     var $popup = $('.popup[data-id="'+popup_id+'"]');
     $.each(markers, function(key, marker) {
       if(marker.tweet_id == popup_id) {
@@ -80,7 +84,7 @@ $(function() {
       }
     });
   }
-  
+
   function popup_position(popup, offset) {
     var x = offset.x,
         y = offset.y,
@@ -96,12 +100,12 @@ $(function() {
     }
     return {x: new_x, y: new_y}
   }
-  
+
   function replace_urls_with_links(text) {
     var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-    return text.replace(exp,"<a href=\"$1\">$1</a>"); 
+    return text.replace(exp,"<a href=\"$1\">$1</a>");
   }
-  
+
   function create_popup(tweet, marker) {
     var popup = $("<div></div>").appendTo("body"),
         text = replace_urls_with_links(tweet.text);
@@ -109,7 +113,7 @@ $(function() {
     popup.addClass('popup');
     popup.html(text);
   }
-  
+
   function click_listener(marker) {
     new google.maps.event.addListener(marker, 'click', function() {
       hide_all_popups();
@@ -121,21 +125,21 @@ $(function() {
       })
     });
   }
-  
+
   function hide_all_popups() {
     $('.popup').each(function() {
       $(this).fadeOut(200);
     })
   }
-    
+
   function assign_profile_photo(tweet) {
-    if(!profile_photo && tweet.user) {
-      profile_photo = tweet.user.profile_image_url.replace("_normal", "");
-      $("aside.profile img").attr('src', profile_photo).show();
-      $("aside.profile .loading").hide();
-    }
+    if(profile_photo || !tweet.user) { return;}
+
+    profile_photo = tweet.user.profile_image_url.replace("_normal", "");
+    $("aside.profile img").attr('src', profile_photo).show();
+    $("aside.profile .loading").hide();
   }
-  
+
   function get_marker_offset(marker) {
     var scale = Math.pow(2, map.getZoom());
     var nw = new google.maps.LatLng(
@@ -149,17 +153,18 @@ $(function() {
         Math.floor((worldCoordinate.y - worldCoordinateNW.y) * scale)
     );
   }
-  
+
   function add_events() {
     var $description = $("section.description"),
         $dundee = $description.find('.dundee'),
         $hamburg = $description.find('.hamburg');
-    
+
     $dundee.click(function() {
       map.panTo(new google.maps.LatLng(center_dundee[0],center_dundee[1]));
       map.setZoom(default_zoom);
       return false;
     });
+
     $hamburg.click(function() {
       map.panTo(new google.maps.LatLng(center_hamburg[0],center_hamburg[1]));
       map.setZoom(default_zoom);
@@ -170,7 +175,7 @@ $(function() {
       $(this).attr('target', '_blank');
     });
   }
-  
+
   init();
   add_events();
 });
