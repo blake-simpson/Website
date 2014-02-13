@@ -3,6 +3,7 @@ $(function() {
   var $canvas = $("#map"),
       centerDundee = [56.462018,-2.970721],
       centerHamburg = [53.5569,9.9946],
+      centerBremen = [53.07929,8.8016],
       defaultZoom = 14,
       location,
       map;
@@ -27,7 +28,8 @@ $(function() {
   function addEvents() {
     var $description = $("section.description"),
         $dundee = $description.find('.dundee'),
-        $hamburg = $description.find('.hamburg');
+        $hamburg = $description.find('.hamburg'),
+        $bremen = $description.find('.bremen');
 
     $dundee.click(function() {
       setMapLocation(centerDundee);
@@ -36,6 +38,11 @@ $(function() {
 
     $hamburg.click(function() {
       setMapLocation(centerHamburg);
+      return false;
+    });
+
+    $bremen.click(function() {
+      setMapLocation(centerBremen);
       return false;
     });
 
