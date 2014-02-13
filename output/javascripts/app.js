@@ -9,7 +9,10 @@ $(function() {
       map;
 
   function init() {
-    location = new google.maps.LatLng(centerHamburg[0], centerHamburg[1]);
+    var _centers = [centerDundee, centerHamburg, centerBremen],
+        randomCenter = _centers[ Math.random() * _centers.length << 0 ];
+
+    location = new google.maps.LatLng(randomCenter[0], randomCenter[1]);
 
     var mapOpts = {
       minZoom: 4,
