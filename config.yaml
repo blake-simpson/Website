@@ -1,6 +1,8 @@
---- 
+---
 output_dir: output
-data_sources: 
+data_sources:
 - items_root: /
   layouts_root: /
   type: filesystem_unified
+  config:
+    encoding: utf-8
